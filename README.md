@@ -25,32 +25,27 @@
 
    - Press `Win + X`, select `Windows PowerShell (Admin)`
 
-2. **Set Execution Policy (if needed)**
-
-   - To allow running unsigned scripts in the current session:
-     ```powershell
-     Set-ExecutionPolicy Bypass -Scope Process -Force
-     ```
-
-3. **Download and Run the Script**
+2. **Download and Run the Script**
 
    - You can run the script directly from GitHub using this one-liner:
      ```powershell
      Set-ExecutionPolicy Bypass -Scope Process -Force; iwr 'https://raw.githubusercontent.com/brsvppv/CreateSelfSignCertificate/refs/heads/main/New-SelfCertificateForm.ps1' -UseBasicParsing | iex
      ```
    - Or, clone/download this repository and run:
+   - To allow running unsigned scripts in the current session:
      ```powershell
+      Set-ExecutionPolicy Bypass -Scope Process -Force
      .\New-SelfCertificateForm.ps1
      ```
 
-4. **Follow the GUI Prompts**
+3. **Follow the GUI Prompts**
 
    - Fill in the required fields (Subject Name, Organization, Country, etc.)
    - Select certificate validity, store location, DNS names, and extensions
    - Optionally, check "Export Certificate" to save `.pfx` and `.cer` files
    - Click **Generate Certificate**
 
-5. **Exporting**
+4. **Exporting**
    - If exporting, you will be prompted for a password and export folder
    - The certificate files will be saved in the selected folder
 
