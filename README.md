@@ -22,18 +22,21 @@
 ## How to Use
 
 1. **Run PowerShell as Administrator**
+
    - Press `Win + X`, select `Windows PowerShell (Admin)`
 
 2. **Set Execution Policy (if needed)**
+
    - To allow running unsigned scripts in the current session:
      ```powershell
      Set-ExecutionPolicy Bypass -Scope Process -Force
      ```
 
 3. **Download and Run the Script**
+
    - You can run the script directly from GitHub using this one-liner:
      ```powershell
-     Set-ExecutionPolicy Bypass -Scope Process -Force; iwr 'https://raw.githubusercontent.com/brsvppv/SingleLabelDomainRegKeyFix/main/Add-SingleLabelDomainName.ps1' -UseBasicParsing | iex
+     Set-ExecutionPolicy Bypass -Scope Process -Force; iwr 'https://raw.githubusercontent.com/brsvppv/CreateSelfSignCertificate/refs/heads/main/New-SelfCertificateForm.ps1' -UseBasicParsing | iex
      ```
    - Or, clone/download this repository and run:
      ```powershell
@@ -41,6 +44,7 @@
      ```
 
 4. **Follow the GUI Prompts**
+
    - Fill in the required fields (Subject Name, Organization, Country, etc.)
    - Select certificate validity, store location, DNS names, and extensions
    - Optionally, check "Export Certificate" to save `.pfx` and `.cer` files
